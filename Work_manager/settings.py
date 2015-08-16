@@ -11,6 +11,14 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+
+TEMPLATE_DIRS = (
+os.path.join(PROJECT_ROOT, '../TasksManager/templates'),
+# Put strings here, like "/home/html/django_templates" or "C:/www/ django/templates".
+# Always use forward slashes, even on Windows.
+# Don't forget to use absolute paths, not relative paths.
+)
 
 
 # Quick-start development settings - unsuitable for production
