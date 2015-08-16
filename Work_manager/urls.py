@@ -8,7 +8,12 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url (r'^$', 'TasksManager.views.index.page'),
+
     url (r'^index$', 'TasksManager.views.index.page', name="public_index"),
-    url (r'^tryurl$', 'TasksManager.tryurl.index.page'),
+
+    #url (r'^$', 'TasksManager.views.index.page'),
+    url (r'^tryurl/$', 'TasksManager.tryurlview.index.page'),
+    #url(r'^connection$', 'TasksManager.views.connection.page'),
+    url(r'^$', 'TasksManager.views.index.page', name="public_index"),
+    url(r'^connection/$', 'TasksManager.views.connection.page',name="public_connection"),
 )

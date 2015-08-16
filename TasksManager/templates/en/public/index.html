@@ -12,6 +12,32 @@ Hello World Django template hh
 </h1>
 <article>
 Hello world !
+    <span> you know it is : {{my_var}} </span>
+
+    <span>
+{% if years < 10 %}
+You are a children
+{% elif years < 18 %}
+You are a teenager
+{% else %}
+You are an adult!
+{% endif %}
+</span>
+
+</br>
+
+<ul>
+{% for cityt in array_city %}
+<li>
+{{ cityt }}
+</li>
+{% endfor %}
+</ul>
+
+</br>
+ <span> {{ my_var | lower }} </span>
+
+
 </article>
 </body>
 </html>
